@@ -19,6 +19,8 @@
         align-items: center;
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
+        width: 100%;
+
     
     }
 }
@@ -35,6 +37,8 @@
         align-items: center;
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
+        width: 100%;
+
     
     }
 }
@@ -51,6 +55,8 @@
         align-items: center;
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
+        width: 100%;
+
     
     }
 }
@@ -66,7 +72,7 @@
 }
 
 .content {
-    flex: 1 0 auto; /* takes up the remaining space between banner and footer */
+    flex: 10 5 auto; /* takes up the remaining space between banner and footer */
     max-width: 800px; /* or whatever maximum width you desire */
     margin: 20px 0; /* vertical margin */
     text-align: left; 
@@ -94,8 +100,9 @@
     margin: 20px auto;
 }
 
-.placard p, ,.placard2 p, .placard3 p {
+.placard p, .placard2 p, .placard3 p {
     text-align: left;  /* Align the text to the left */
+    font-size: medium;
 }
 
 /* CSS for the placard title */
@@ -155,10 +162,10 @@
         color: white;
     }
 
-        .btn-primary {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
-        }
+    .btn-primary {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+    }
 
     button:hover {
         opacity: 0.8; /* Slight opacity change on hover for a subtle effect */
@@ -192,9 +199,10 @@
 .footer {
     width: 100%;
     background-color: #333;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
     color: white;
     flex-shrink: 0;
+    font-size: small;
 }
 
