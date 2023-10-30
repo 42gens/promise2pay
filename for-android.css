@@ -20,13 +20,9 @@
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
         width: 100%;
+
+    
     }
-    .video-container {
-        display:grid;
-        justify-content: center; /* center horizontally */
-        align-items: center;     /* center vertically */
-        height: 100vh; /* 100% of the viewport height, ensuring the video stays centered */    
-    }  
 }
 
 /* Tablets */
@@ -42,13 +38,9 @@
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
         width: 100%;
+
+    
     }
-    .video-container {
-        display:grid;
-        justify-content: center; /* center horizontally */
-        align-items: center;     /* center vertically */
-        height: 100vh; /* 100% of the viewport height, ensuring the video stays centered */    
-    }  
 }
 
 /* Desktops and above */
@@ -64,13 +56,9 @@
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
         width: 100%;
+
+    
     }
-    .video-container {
-        display:grid;
-        justify-content: center; /* center horizontally */
-        align-items: center;     /* center vertically */
-        height: 100vh; /* 100% of the viewport height, ensuring the video stays centered */    
-    }  
 }
 
 .banner {
@@ -208,11 +196,24 @@
 
     
     .video-container {
-        display:grid;
-        justify-content: center; /* center horizontally */
-        align-items: center;     /* center vertically */
-        height: 100vh; /* 100% of the viewport height, ensuring the video stays centered */    
-    }   
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000; /* To ensure any unfilled space is black or any other color you like */
+        margin-bottom: 50px; /* Adjust this based on your UI layout */
+    }
+    
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This ensures the video covers the whole space without distortion */
+    }
+    
     
 .footer {
     width: 100%;
