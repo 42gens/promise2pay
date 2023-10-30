@@ -5,8 +5,6 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
 let mediaRecorder;
 let recordedChunks = [];
 
@@ -154,7 +152,7 @@ function showNextSteps() {
     nextStepsSection.innerHTML = `
         <h2>Next Steps:</h2>
         <ol>
-            <li>Email The Video And Agreement To The Lender and Yourself 
+            <li>Email The Video And Agreement To The Lender and  To Yourself 
                 <button onclick="openDefaultEmail()">Open Email</button>
             </li><br><br><br><br>
             <li>Set A Payback Reminder
@@ -168,13 +166,32 @@ function showNextSteps() {
 }
 
 
-
 function openDefaultEmail() {
     // Create mailto link with attachments
     const borrowerName = document.getElementById('borrowerName').value;
     const lenderName = document.getElementById('lenderName').value;
-    const subject = `Promise to pay from ${borrowerName} to ${lenderName}`;
-    const body = `Attached is the video and agreement Or You are being requested to use Promise2Pay app, go to https://42gens.github.io/promise2pay/ to promise to pay back.`;
+    const subject = `Promise2Pay Says, Here Is Proof Your Borrower Will Pay You Back`;
+    const body = `Your Borrower has video recorded their proimse to you back.  Attached in this emial is the Video And Agreement. Visit https://42gens.github.io/promise2pay/ to promise to pay back.`;
+    const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+}
+
+
+function openDefaultEmail3() {
+    // Create mailto link with attachments
+    // Get values (if you use them later)
+    const borrowerName = document.getElementById('borrowerName').value;
+    const lenderName = document.getElementById('lenderName').value;
+    
+    const subject = `You Requested To Borrow Money`;
+
+    // Use plain text for URLs
+    const body = `Your Lender Is Requesting You To Use Promise2Pay App:\n` +
+                 `Visit: https://42gens.github.io/promise2pay/\n\n` + 
+                 `For Protection From Unjust Law Enforcement...\n` +
+                 `Visit: https://safe-watcher.com`;
+
     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoLink;
