@@ -61,6 +61,8 @@ async function startRecording() {
     const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
     const video = document.getElementById('video');
     video.srcObject = stream;
+    video.muted = true; // Mute the video to prevent echo
+
 
     mediaRecorder = new MediaRecorder(stream);
 
