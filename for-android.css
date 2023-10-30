@@ -1,3 +1,247 @@
+/* Default mobile styles go here */
+
+/* Larger phones to small tablets */
+@media (min-width: 480px) {
+    /* styles */
+    /* Reset margin and padding for all elements for a consistent look */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* take up at least the full height of the viewport */
+    height: 100%;
+
+}
+
+.banner {
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    flex: 1 0 auto; /* takes up the remaining space between banner and footer */
+    max-width: 100%; /* or whatever maximum width you desire */
+    margin: 20px 0; /* vertical margin */
+    text-align: left; 
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.divider {
+    border-top: 2px solid black; /* Change 'black' to any color you prefer */
+    margin: 20px 0; /* Adds space above and below the divider */
+    width: 100%; /* Ensures the divider stretches the full width of its container */
+}
+
+
+/* Adding CSS for the placard */
+.placard {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f8f8;  /* Light grey background */
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%; 
+    margin: 20px auto;
+}
+
+.placard p {
+    text-align: left;  /* Align the text to the left */
+}
+
+/* CSS for the placard title */
+.placard-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;  /* You can change this to your preferred color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* CSS for the content when it's collapsed */
+.placard-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;  /* Animation for the transition */
+    border: 1px solid #ccc;
+    border-top: none;  /* Remove the top border to connect seamlessly with the header */
+    padding: 0 15px;   /* Padding for the left and right */
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+/* Adding CSS for the placard */
+.placard2 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f8f8;  /* Light grey background */
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%; 
+    margin: 20px auto;
+}
+
+.placard2 p {
+    text-align: left;  /* Align the text to the left */
+}
+
+/* CSS for the placard title */
+.placard2-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;  /* You can change this to your preferred color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* CSS for the content when it's collapsed */
+.placard2-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;  /* Animation for the transition */
+    border: 1px solid #ccc;
+    border-top: none;  /* Remove the top border to connect seamlessly with the header */
+    padding: 0 15px;   /* Padding for the left and right */
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* Adding CSS for the placard */
+.placard3 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f8f8;  /* Light grey background */
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%; 
+    margin: 20px auto;
+}
+
+.placard3 p {
+    text-align: left;  /* Align the text to the left */
+}
+
+/* CSS for the placard title */
+.placard3-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;  /* You can change this to your preferred color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* CSS for the content when it's collapsed */
+.placard3-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;  /* Animation for the transition */
+    border: 1px solid #ccc;
+    border-top: none;  /* Remove the top border to connect seamlessly with the header */
+    padding: 0 15px;   /* Padding for the left and right */
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* CSS to center the buttons using Flexbox */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* For spacing between buttons */
+    margin-top: 10px; /* Space above the button container */
+}
+
+    /* CSS for the button colors */
+    #startBtn {
+    background-color: #4CAF50; /* Green color */
+    color: #FFFFFF; /* White text */
+    }
+    
+    #stopBtn {
+        background-color: #FF5733; /* Red color */
+        color: #FFFFFF; /* White text */
+    }
+    
+    #downloadBtn {
+        background-color: #3498DB; /* Blue color */
+        color: #FFFFFF; /* White text */
+    }
+
+    /* If you want to make the buttons look better, consider adding a small padding and border-radius */
+    button {
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+        color: white;
+    }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+    button:hover {
+        opacity: 0.8; /* Slight opacity change on hover for a subtle effect */
+    }
+
+    .lender-requesting {
+        width: 100%;
+        padding: 0 20px;  /* Padding on the left and right side */
+    }
+
+    .attorney-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4CAF50; /* This is a shade of green, you can change it to any color you like */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .attorney-button:hover {
+        background-color: #45a049; /* Darker shade of the original green for a hover effect */
+    }
+    
+    
+
+.footer {
+    width: 100%;
+    max-width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    flex-shrink: 0;
+}
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    /* styles */
 /* Reset margin and padding for all elements for a consistent look */
 * {
     margin: 0;
@@ -231,4 +475,257 @@ body {
     color: white;
     flex-shrink: 0;
 }
+}
+
+/* Desktops and above */
+@media (min-width: 1024px) {
+    /* styles */
+/* Reset margin and padding for all elements for a consistent look */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* take up at least the full height of the viewport */
+    height: 100%;
+
+}
+
+.banner {
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    flex: 1 0 auto; /* takes up the remaining space between banner and footer */
+    max-width: 800px; /* or whatever maximum width you desire */
+    margin: 20px 0; /* vertical margin */
+    text-align: left; 
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.divider {
+    border-top: 2px solid black; /* Change 'black' to any color you prefer */
+    margin: 20px 0; /* Adds space above and below the divider */
+    width: 100%; /* Ensures the divider stretches the full width of its container */
+}
+
+
+/* Adding CSS for the placard */
+.placard {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f8f8;  /* Light grey background */
+    border-radius: 5px;
+    width: 700px;
+    max-width: 100%; 
+    margin: 20px auto;
+}
+
+.placard p {
+    text-align: left;  /* Align the text to the left */
+}
+
+/* CSS for the placard title */
+.placard-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;  /* You can change this to your preferred color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* CSS for the content when it's collapsed */
+.placard-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;  /* Animation for the transition */
+    border: 1px solid #ccc;
+    border-top: none;  /* Remove the top border to connect seamlessly with the header */
+    padding: 0 15px;   /* Padding for the left and right */
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+/* Adding CSS for the placard */
+.placard2 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f8f8;  /* Light grey background */
+    border-radius: 5px;
+    width: 700px;
+    max-width: 100%; 
+    margin: 20px auto;
+}
+
+.placard2 p {
+    text-align: left;  /* Align the text to the left */
+}
+
+/* CSS for the placard title */
+.placard2-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;  /* You can change this to your preferred color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* CSS for the content when it's collapsed */
+.placard2-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;  /* Animation for the transition */
+    border: 1px solid #ccc;
+    border-top: none;  /* Remove the top border to connect seamlessly with the header */
+    padding: 0 15px;   /* Padding for the left and right */
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* Adding CSS for the placard */
+.placard3 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f8f8;  /* Light grey background */
+    border-radius: 5px;
+    width: 700px;
+    max-width: 100%; 
+    margin: 20px auto;
+}
+
+.placard3 p {
+    text-align: left;  /* Align the text to the left */
+}
+
+/* CSS for the placard title */
+.placard3-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;  /* You can change this to your preferred color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* CSS for the content when it's collapsed */
+.placard3-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;  /* Animation for the transition */
+    border: 1px solid #ccc;
+    border-top: none;  /* Remove the top border to connect seamlessly with the header */
+    padding: 0 15px;   /* Padding for the left and right */
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* CSS to center the buttons using Flexbox */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* For spacing between buttons */
+    margin-top: 10px; /* Space above the button container */
+}
+
+    /* CSS for the button colors */
+    #startBtn {
+    background-color: #4CAF50; /* Green color */
+    color: #FFFFFF; /* White text */
+    }
+    
+    #stopBtn {
+        background-color: #FF5733; /* Red color */
+        color: #FFFFFF; /* White text */
+    }
+    
+    #downloadBtn {
+        background-color: #3498DB; /* Blue color */
+        color: #FFFFFF; /* White text */
+    }
+
+    /* If you want to make the buttons look better, consider adding a small padding and border-radius */
+    button {
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+        color: white;
+    }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+    button:hover {
+        opacity: 0.8; /* Slight opacity change on hover for a subtle effect */
+    }
+
+    .lender-requesting {
+        width: 46%;
+        padding: 0 20px;  /* Padding on the left and right side */
+    }
+
+    .attorney-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4CAF50; /* This is a shade of green, you can change it to any color you like */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .attorney-button:hover {
+        background-color: #45a049; /* Darker shade of the original green for a hover effect */
+    }
+    
+    
+
+.footer {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    flex-shrink: 0;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
