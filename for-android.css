@@ -239,6 +239,13 @@ video {
     max-width: 60%; /* Adjust based on your design */
 }
 
+/* Media query for mobile portrait mode */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    #splash-screen img {
+        max-width: 90%; /* Increase size for portrait mode. Adjust as needed. */
+    }
+}
+
 @keyframes fadeOut {
     100% { 
         opacity: 0; 
