@@ -83,7 +83,7 @@
 
 
 /* Adding CSS for the placard */
-.placard {
+.placard, .placard2, .placard3 {
     border: 1px solid #ccc;
     padding: 15px;
     margin: 20px 0;
@@ -94,12 +94,12 @@
     margin: 20px auto;
 }
 
-.placard p {
+.placard p, ,.placard2 p, .placard3 p {
     text-align: left;  /* Align the text to the left */
 }
 
 /* CSS for the placard title */
-.placard-header {
+.placard-header, .placard2-header, .placard3-header {
     padding: 10px;
     cursor: pointer;
     background-color: #f1f1f1;  /* You can change this to your preferred color */
@@ -109,84 +109,7 @@
 }
 
 /* CSS for the content when it's collapsed */
-.placard-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;  /* Animation for the transition */
-    border: 1px solid #ccc;
-    border-top: none;  /* Remove the top border to connect seamlessly with the header */
-    padding: 0 15px;   /* Padding for the left and right */
-    border-radius: 0 0 5px 5px;
-}
-
-
-
-/* Adding CSS for the placard */
-.placard2 {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 20px 0;
-    background-color: #f8f8f8;  /* Light grey background */
-    border-radius: 5px;
-    width: 700px;
-    max-width: 100%; 
-    margin: 20px auto;
-}
-
-.placard2 p {
-    text-align: left;  /* Align the text to the left */
-}
-
-/* CSS for the placard title */
-.placard2-header {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #f1f1f1;  /* You can change this to your preferred color */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: left;
-}
-
-/* CSS for the content when it's collapsed */
-.placard2-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;  /* Animation for the transition */
-    border: 1px solid #ccc;
-    border-top: none;  /* Remove the top border to connect seamlessly with the header */
-    padding: 0 15px;   /* Padding for the left and right */
-    border-radius: 0 0 5px 5px;
-}
-
-
-/* Adding CSS for the placard */
-.placard3 {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 20px 0;
-    background-color: #f8f8f8;  /* Light grey background */
-    border-radius: 5px;
-    width: 700px;
-    max-width: 100%; 
-    margin: 20px auto;
-}
-
-.placard3 p {
-    text-align: left;  /* Align the text to the left */
-}
-
-/* CSS for the placard title */
-.placard3-header {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #f1f1f1;  /* You can change this to your preferred color */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: left;
-}
-
-/* CSS for the content when it's collapsed */
-.placard3-content {
+.placard-content, .placard2-content, .placard3-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;  /* Animation for the transition */
