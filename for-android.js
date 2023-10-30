@@ -145,7 +145,7 @@ function showNextSteps() {
         <ol>
             <li>Email The Video And Agreement To The Lender and Yourself 
                 <button onclick="openDefaultEmail()">Open Email</button>
-            </li>
+            </li><br><br>
             <li>Set A Payback Reminder
                 <button onclick="openDefaultCalendar()">Set Reminder</button>
             </li>
