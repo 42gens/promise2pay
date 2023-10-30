@@ -193,6 +193,14 @@
     .attorney-button:hover {
         background-color: #45a049; /* Darker shade of the original green for a hover effect */
     }
+
+    
+    .video-container {
+        display: flex;
+        justify-content: center; /* center horizontally */
+        align-items: center;     /* center vertically */
+        height: 100vh; /* 100% of the viewport height, ensuring the video stays centered */
+    }
     
     
 

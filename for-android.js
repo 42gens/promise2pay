@@ -104,7 +104,7 @@ async function startRecording() {
 
     
             // Save the txt data
-            const txtData = `I ${document.getElementById('borrowerName').value}, will promise to pay ${document.getElementById('lenderName').value} back by ${document.getElementById('repaymentDate').value}. Sign ${document.getElementById('borrowerSignature').value} and ${document.getElementById('borrowerEmail').value} as a signature.`;
+            const txtData = `I ${document.getElementById('borrowerName').value}, will promise to pay ${document.getElementById('lenderName').value} back by this date, ${document.getElementById('repaymentDate').value}. Sign ${document.getElementById('borrowerSignature').value} and ${document.getElementById('borrowerEmail').value}.`;
             const txtBlob = new Blob([txtData], {type: 'text/plain'});
             const txtURL = URL.createObjectURL(txtBlob);
             const txtFilename = generateFilename('txt', currentTimestamp);

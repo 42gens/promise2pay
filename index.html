@@ -19,14 +19,16 @@
         <label><input type="checkbox" id="borrowerCheckbox"> I 'Borrower' am requesting to borrow money from 'Lender' and offering this agreement.</label><br><br>
         
         I <input type="text" id="borrowerName" placeholder="Borrower's Full Name">, will promise to pay 
-        <input type="text" id="lenderName" placeholder="Lender's Full Name"> back by 
+        <input type="text" id="lenderName" placeholder="Lender's Full Name"> back by this date,
         <input type="date" id="repaymentDate">.<br>
         Sign <input type="text" id="borrowerSignature" placeholder="Borrower's Full Name"> and 
-        <input type="email" id="borrowerEmail" placeholder="Borrower's Email Address"> as a signature.<br><br>
+        <input type="email" id="borrowerEmail" placeholder="Borrower's Email Address">.<br><br>
     </form>
     <p style="text-align: center;"><strong>Borrower - Video Record Your Agreement</strong></p>
     <p style="font-size:small; text-align: center;">Example: I [Your Full Name], promise to pay [Lenders Full Name] in the amount of [The Dollar Amount], by [Date].</p>
-    <div style="text-align: center;"><video id="video" controls autoplay></video></div>
+    <div class="video-container">
+        <video id="video" controls autoplay></video>
+    </div>
     <div class="button-container">
         <button id="startBtn">Start Recording</button>
         <button id="stopBtn">Stop Recording</button>
@@ -39,6 +41,7 @@
     <div class="divider"></div><br>
 
     <div><label style="font-size: large"><strong>Lender Request</strong></label></div>
+    <p style="font-size:small; text-align: left;">Scenario: Your friend is requesting to borrow money, then have them record their promise to pay you back!</p>
     <label style="font-size: large"><input type="checkbox" id="lenderCheckbox"> I am the Lender requesting this agreement. <button id="openDefaultEmail" onclick="openDefaultEmail()">Email Borrower</button></label><br><br>
 
     <!-- Divider -->
