@@ -199,7 +199,7 @@
         display:grid;
         justify-content: center; /* center horizontally */
         align-items: center;     /* center vertically */
-        height: 40vh; /* 100% of the viewport height, ensuring the video stays centered */    
+        height: 100vh; /* 100% of the viewport height, ensuring the video stays centered */    
     }   
     
 .footer {
