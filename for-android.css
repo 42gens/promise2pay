@@ -135,85 +135,117 @@
     margin-top: 10px; /* Space above the button container */
 }
 
-    /* CSS for the button colors */
-    #startBtn {
-    background-color: #4CAF50; /* Green color */
+/* CSS for the button colors */
+#startBtn {
+background-color: #4CAF50; /* Green color */
+color: #FFFFFF; /* White text */
+}
+
+#stopBtn {
+    background-color: #FF5733; /* Red color */
     color: #FFFFFF; /* White text */
-    }
-    
-    #stopBtn {
-        background-color: #FF5733; /* Red color */
-        color: #FFFFFF; /* White text */
-    }
-    
-    #downloadBtn {
-        background-color: #3498DB; /* Blue color */
-        color: #FFFFFF; /* White text */
-    }
+}
 
-    /* If you want to make the buttons look better, consider adding a small padding and border-radius */
-    button {
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        background-color: #4CAF50;
-        border-color: #4CAF50;
-        color: white;
-    }
+#downloadBtn {
+    background-color: #3498DB; /* Blue color */
+    color: #FFFFFF; /* White text */
+}
 
-    .btn-primary {
-        background-color: #4CAF50;
-        border-color: #4CAF50;
-    }
+/* If you want to make the buttons look better, consider adding a small padding and border-radius */
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+    transition: all 0.3s;
+}
 
-    button:hover {
-        opacity: 0.8; /* Slight opacity change on hover for a subtle effect */
-    }
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
 
-    .lender-requesting {
-        width: 46%;
-        padding: 0 20px;  /* Padding on the left and right side */
-    }
+button:hover {
+    opacity: 0.8; /* Slight opacity change on hover for a subtle effect */
+}
 
-    .attorney-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        text-align: center;
-        text-decoration: none;
-        background-color: #4CAF50; /* This is a shade of green, you can change it to any color you like */
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
+button:active {
+    transform: scale(0.95); /* Slightly shrinks when pressed */
+}
 
-    .attorney-button:hover {
-        background-color: #45a049; /* Darker shade of the original green for a hover effect */
-    }
 
-    
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        background: #000; /* To ensure any unfilled space is black or any other color you like */
-        margin-bottom: 50px; /* Adjust this based on your UI layout */
+.lender-requesting {
+    width: 46%;
+    padding: 0 20px;  /* Padding on the left and right side */
+}
+
+.attorney-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50; /* This is a shade of green, you can change it to any color you like */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.attorney-button:hover {
+    background-color: #45a049; /* Darker shade of the original green for a hover effect */
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* To ensure any unfilled space is black or any other color you like */
+    margin-bottom: 50px; /* Adjust this based on your UI layout */
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the video covers the whole space without distortion */
+}
+
+
+/* CSS for Splash Screen */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* ensures it's on top of all other elements */
+    background-color: #FFFFFF; /* Adjust as per your design */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 1s forwards 2.5s;
+}
+#splash-screen img {
+    max-width: 60%; /* Adjust based on your design */
+}
+
+@keyframes fadeOut {
+    100% { 
+        opacity: 0; 
+        display: none; 
     }
-    
-    video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* This ensures the video covers the whole space without distortion */
-    }
-    
+}
+
     
 .footer {
     width: 100%;
@@ -224,4 +256,3 @@
     flex-shrink: 0;
     font-size: small;
 }
-

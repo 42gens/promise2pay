@@ -1,3 +1,12 @@
+window.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById("splash-screen").style.display = "none";
+    }, 3000); // hides after 3 seconds
+});
+
+
+
+
 let mediaRecorder;
 let recordedChunks = [];
 
