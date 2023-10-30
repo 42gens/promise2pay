@@ -8,14 +8,15 @@
 </head>
 <body>
 <div class="banner">
-    Promise 2 Pay
+    Promise2Pay<br>
+    Person 2 Person Agreement
 </div>
 
 <div class="content">
+    <div class="content" id="contentContainer">
     <form id="promiseForm">
-        <label><strong>Agreement:</strong></label><br>
-        <label><input type="checkbox" id="borrowerCheckbox"> I 'Borrower' am requesting to borrow money from 'Lender' and offering this agreement.</label><br>
-        <label><input type="checkbox" id="lenderCheckbox"> I am the Lender requesting this agreement.</label><br><br>
+        <label><strong>Agreement</strong></label><br>
+        <label><input type="checkbox" id="borrowerCheckbox"> I 'Borrower' am requesting to borrow money from 'Lender' and offering this agreement.</label><br><br>
         
         I <input type="text" id="borrowerName" placeholder="Borrower's Full Name">, will promise to pay 
         <input type="text" id="lenderName" placeholder="Lender's Full Name"> back by 
@@ -24,13 +25,119 @@
         <input type="email" id="borrowerEmail" placeholder="Borrower's Email Address"> as a signature.<br><br>
     </form>
     <p style="text-align: center;"><strong>Borrower - Video Record Your Agreement</strong></p>
+    <p style="font-size:small; text-align: center;">Example: I [Your Full Name], promise to pay [Lenders Full Name] in the amount of [The Dollar Amount], by [Date].</p>
     <div style="text-align: center;"><video id="video" controls autoplay></video></div>
     <div class="button-container">
         <button id="startBtn">Start Recording</button>
         <button id="stopBtn">Stop Recording</button>
-        <button id="downloadBtn">Download Video</button>
-    </div>    
+        <button id="downloadBtn">Download Video</button><br><br>
+    </div>
+    </div><br>
+    
+
+    <!-- Divider -->
+    <div class="divider"></div><br>
+
+    <div><label><strong>Lender Request</strong></label></div>
+    <label><input type="checkbox" id="lenderCheckbox"> I am the Lender requesting this agreement. <button id="openDefaultEmail" onclick="openDefaultEmail()">Email Borrower</button></label><br><br>
+
+    <!-- Divider -->
+<div class="divider"></div>
+<!-- Placard with the message 2 -->
+<div><label><strong>If Past Due</strong></label></div>
+<div class="placard2">
+    <div class="placard2-header" onclick="togglePlacardContent2()"> Forgiveness...</div>
+    <div class="placard2-content">
+        <br><p>Wonderful of you to Forgive, here is a poem just for you!</p><br>
+
+        <ul>
+            <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            <p>In the realm where numbers dance and sway,</p>
+            <p>Debts cast shadows, long and gray.</p>
+            <p>Yet beyond ledgers and coins that clink,</p>
+            <p>There's a deeper truth, a stronger link.</p><br>
+            
+            <p>For in life’s grand tapestry, thread by thread,</p>
+            <p>What matters most isn't what's owed or said.</p>
+            <p>But the gestures of grace, the will to forgo,</p>
+            <p>Releasing the debts, letting them go.</p><br>
+        
+            <p>To forgive a debt is to unshackle a soul,</p>
+            <p>To mend a tear, to make things whole.</p>
+            <p>It’s not just numbers fading to naught,</p>
+            <p>But a liberation, a lesson self-taught.</p><br>
+        
+            <p>The weight of debt can burden a heart,</p>
+            <p>Tug at dreams, tear them apart.</p>
+            <p>Yet with one act, compassionate and true,</p>
+            <p>The weight lifts, the skies turn blue.</p><br>
+        
+            <p>To release a debt is to sow a seed,</p>
+            <p>Of trust, of hope, of a timeless creed.</p>
+            <p>For in the garden of life’s vast expanse,</p>
+            <p>Forgiveness lets both debtor and lender dance.</p><br>
+        
+            <p>So when ledgers beckon, stern and cold,</p>
+            <p>Think of the tales of grace retold.</p>
+            <p>For in forgiving debt, we more than comply,</p>
+            <p>We touch the heart, we let spirits fly.</p>
+            <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p><br><br>
+        </ul>
+            <p>Let your borrower know you have forgiven the debt, send them and email:</p>
+            <button id="emailBorrowerBtn" onclick="openDefaultEmail2()">Email Borrower</button><br><br>
+        </div>
 </div>
+
+<!-- Placard with the message 3 -->
+<div class="placard3">
+    <div class="placard3-header" onclick="togglePlacardContent3()">It's Your Proof, Maybe Consider An Embrace of Support and Trust...</div>
+    <div class="placard3-content">
+        <br><p></p><br>
+
+        <p>In moments of need, the warmth of our close friends and family shines the brightest. 
+        If you feel comfortable, consider sharing the proof of repayment within this trusted circle.
+        By doing so, you open a door to heartfelt support, where those closest to you and the borrower, may offer a 
+        helping hand in guiding the borrower towards fulfilling their commitment. Remember, 
+        this journey is about connection and compassion, far removed from the public eye of social media. 
+        Together, in this circle of trust and love, we can create a nurturing space that encourages responsibility and care."
+        </p><br>
+        </div>
+</div>
+
+<!-- Placard with the message 1 -->
+<div class="placard">
+    <div class="placard-header" onclick="togglePlacardContent()">For Small Claims Court Considerations...</div>
+    <div class="placard-content">
+        <br><p>If you're considering pursuing a case in small claims court for a personal loan that's owed to you, the type of attorney you'd typically be looking for is a civil litigation attorney, specifically one who handles debt collection or contract disputes. However, there are a few things to consider:</p><br>
+        <ul>
+            <li><strong>Self-representation: </strong>Small claims court is specifically designed for individuals to represent themselves without the need for an attorney. The process is generally simpler and more streamlined than other courts.</li><br>
+            <li><strong>Monetary Limit: </strong>Each state has a different maximum amount you can sue for in small claims court. Be sure the amount owed to you is within the jurisdictional limit.</li><br>
+            <li><strong>Cost: </strong>Hiring an attorney might cost more than the amount you're trying to recover, especially if the loan amount is on the lower end. You'll want to weigh the cost of hiring an attorney against the potential benefit.</li><br>
+            <li><strong>Documentation: </strong>Make sure you have all necessary documentation such as written agreements, promissory notes, or any other evidence that proves the existence and terms of the loan.</li><br>
+            <li><strong>Consultations: </strong>Even if you decide to represent yourself, you may want to consider having a consultation with an attorney to get advice on the specifics of your case. Some attorneys offer free or low-cost initial consultations.</li><br>
+            <li><strong>Mediation: </strong>Some courts require or offer mediation as an alternative to a trial. This can be an informal way to resolve the dispute without going through the formal court process.</li><br>
+            <li><strong>Collection: </strong>Winning in small claims court is just the first step. You will then have to collect the judgment, which can sometimes be challenging. Some attorneys specialize in judgment collection, so if you win and have difficulty collecting, you might consider hiring one.</li><br>
+            <!-- Continue with the other points in the list format -->
+        </ul>
+
+            <p><strong>If you do decide to hire an attorney, use... </strong><a href="https://safe-watcher.com" class="attorney-button">Safw-Watcher - Hire An Attorney</a></p><br>
+            
+
+        </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
 <script src="for-android.js"></script>
+
+<footer class="py-3 text-center" style="background-color: #4CAF50;">
+    <p style="color: white;">&copy; 2023 Promis2Pay App - Safe-Watcher.com and Safe-Watcher App | All Rights Reserved | <a href="legal.html" class="footer-text">Terms and Agreement</a> | <span id="shareButton" style="cursor: pointer; text-decoration: underline;" class="footer-text">Share</span></p>
+</footer>
 </body>
 </html>

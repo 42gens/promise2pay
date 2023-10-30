@@ -1,20 +1,3 @@
-async function requestPermissions() {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-        if (stream) {
-            // Close the stream after checking to ensure we don't unnecessarily access the user's camera/microphone
-            stream.getTracks().forEach(track => track.stop());
-            console.log("Permissions Granted");
-            return true;  // permissions granted
-        }
-    } catch (error) {
-        console.error("Permission error:", error);
-        return false;  // permissions denied
-    }
-}
-/////End of Permissions Check
-
-
 let mediaRecorder;
 let recordedChunks = [];
 
@@ -36,6 +19,36 @@ document.getElementById('lenderCheckbox').addEventListener('change', function() 
     }
 });
 
+///???
+function showAgreement() {
+    // Display the agreement logic here (based on your UI/HTML structure)
+    // For example: document.getElementById('agreementSection').style.display = 'block';
+}
+
+function showLenderOptions() {
+    const lenderOptionsSection = document.createElement('div');
+    lenderOptionsSection.innerHTML = `
+        <button onclick="offerSendEmail()">Offer Send Email</button>
+        <button onclick="offerSendText()">Offer Text</button>
+    `;
+    document.body.appendChild(lenderOptionsSection);
+}
+
+function offerSendEmail() {
+    const subject = `Lending Request`;
+    const body = `You requested to borrow funds. Your lender is requesting for you to visit this link/app. From here, your lender will respond to you.`;
+    const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+}
+
+function offerSendText() {
+    // Here, we use the SMS URI scheme to send SMS. Note: This may not work on all devices or browsers.
+    const body = `You requested to borrow funds. Your lender is requesting for you to visit this link/app. From here, your lender will respond to you.`;
+    window.location.href = `sms:?&body=${encodeURIComponent(body)}`;
+}
+
+////???
+
 function generateFilename(extension) {
     const borrowerName = document.getElementById('borrowerName').value;
     const lenderName = document.getElementById('lenderName').value;
@@ -45,13 +58,6 @@ function generateFilename(extension) {
 }
 
 async function startRecording() {
-    const hasPermissions = await requestPermissions();
-    
-    if (!hasPermissions) {
-        alert("Video and microphone permissions are required to record the agreement.");
-        return;
-    }
-
     const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
     const video = document.getElementById('video');
     video.srcObject = stream;
@@ -137,7 +143,7 @@ function showNextSteps() {
     nextStepsSection.innerHTML = `
         <h2>Next Steps:</h2>
         <ol>
-            <li>Email Video And Agreement To Yourself and The Borrower 
+            <li>Email The Video And Agreement To The Lender and Yourself 
                 <button onclick="openDefaultEmail()">Open Email</button>
             </li>
             <li>Set A Payback Reminder
@@ -145,19 +151,38 @@ function showNextSteps() {
             </li>
         </ol><br>
     `;
-    document.body.appendChild(nextStepsSection);
+
+    const contentContainer = document.getElementById('contentContainer');
+    contentContainer.appendChild(nextStepsSection);
 }
+
+
 
 function openDefaultEmail() {
     // Create mailto link with attachments
     const borrowerName = document.getElementById('borrowerName').value;
     const lenderName = document.getElementById('lenderName').value;
     const subject = `Promise to pay from ${borrowerName} to ${lenderName}`;
-    const body = `Attached is the video and agreement.`;
+    const body = `Attached is the video and agreement Or You are being requested to use Promise2Pay app, go to https://42gens.github.io/promise2pay/ to promise to pay back.`;
     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoLink;
 }
+
+///??
+function openDefaultEmail2() {
+    // Create mailto link with attachments
+    const borrowerName = document.getElementById('borrowerName').value;
+    const lenderName = document.getElementById('lenderName').value;
+    const subject = `Promise2Pay says, what a good day.. Your Debt is Forgiven!`;
+    const body = `Your personal loan is forgiven, feels good doesn't? Be sure to thank your lender! Safe-Watcher.com and safe-watcher app has your back!`;
+    const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+}
+///??
+
+
 
 function openDefaultCalendar() {
     const repaymentDate = document.getElementById('repaymentDate').value;
@@ -170,3 +195,33 @@ function openDefaultCalendar() {
 // Attach the event listeners to the buttons
 document.getElementById('startBtn').addEventListener('click', startRecording);
 document.getElementById('stopBtn').addEventListener('click', stopRecording);
+
+function togglePlacardContent() {
+    const content = document.querySelector(".placard-content");
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+}
+
+function togglePlacardContent2() {
+    const content2 = document.querySelector(".placard2-content");
+    if (content2.style.maxHeight) {
+        content2.style.maxHeight = null;
+    } else {
+        content2.style.maxHeight = content2.scrollHeight + "px";
+    }
+}
+
+function togglePlacardContent3() {
+    const content2 = document.querySelector(".placard3-content");
+    if (content2.style.maxHeight) {
+        content2.style.maxHeight = null;
+    } else {
+        content2.style.maxHeight = content2.scrollHeight + "px";
+    }
+}
+
+
+
