@@ -20,6 +20,8 @@
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
         width: 100%;
+        margin: 0;
+        padding: 0;
 
     
     }
@@ -38,6 +40,8 @@
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
         width: 100%;
+        margin: 0;
+        padding: 0;
 
     
     }
@@ -56,8 +60,9 @@
         min-height: 100vh; /* take up at least the full height of the viewport */
         height: 100%;
         width: 100%;
-
-    
+        margin: 0;
+        padding: 0;
+   
     }
 }
 
@@ -257,6 +262,7 @@ video {
     
 .footer {
     width: 100%;
+    box-sizing: border-box;  /* This makes sure padding and border are included in the width */
     background-color: #333;
     padding: 5px 0;
     text-align: center;
