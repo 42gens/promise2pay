@@ -167,7 +167,7 @@ function showNextSteps() {
 
 
 function openDefaultEmail() {
-    // Create mailto link with attachments
+    // Create mailto link with attachmentss
     const borrowerName = document.getElementById('borrowerName').value;
     const lenderName = document.getElementById('lenderName').value;
     const subject = `Promise2Pay Says, Here Is Proof Your Borrower Will Pay You Back`;

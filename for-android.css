@@ -268,5 +268,5 @@ video {
     text-align: center;
     color: white;
     flex-shrink: 0;
-    font-size: small;
+    font-size: smaller;
 }
